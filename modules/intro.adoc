@@ -1,0 +1,129 @@
+[id="intro"]
+= Introduction
+
+The following are some example elements:
+
+Here is a sample code block, click to copy:
+
+[source,terminal]
+----
+$ git commit -m "even more changes"
+----
+
+[source,json]
+----
+link:https://raw.githubusercontent.com/openshift/installer/release-4.7/upi/azure/01_vnet.json[]
+----
+
+
+Here is some ruby:
+
+[source,ruby]
+----
+doc = Asciidoctor::Document.new("*This* is it!", :header_footer => false)
+
+puts doc.render
+----
+
+Here is a tip note:
+
+[TIP]
+=====
+Go to this URL to learn more about it:
+
+* http://asciidoc.org
+=====
+
+Another note:
+
+[NOTE]
+====
+This is a note.
+====
+
+.Some YAML for you
+[source,yaml]
+----
+apiVersion: xl-deploy/v1
+kind: Infrastructure
+spec:
+- name: Infrastructure/Apache  host
+  type: overthere.SshHost
+  os: UNIX
+  address: tomcat-host.local
+  username: tomcatuser
+- name: Infrastructure/local-docker
+  type: docker.Engine
+  dockerHost: http://dockerproxy:2375
+- name: aws
+  type: aws.Cloud
+  accesskey: YOUR ACCESS KEY
+  accessSecret: YOUR SECRET
+----
+
+A caution:
+
+[CAUTION]
+====
+This is a caution!
+====
+
+Here is a sample procedure:
+
+.Procedure
+
+. Get the `oc` binary, if needed. It should already exist on the provisioner node.
++
+[source,bash]
+----
+[kni@provisioner ~]$ curl -s https://mirror.openshift.com/pub/openshift-v4/clients/ocp/$VERSION/openshift-client-linux-$VERSION.tar.gz | tar zxvf - oc
+----
++
+[source,bash]
+----
+[kni@provisioner ~]$ sudo cp oc /usr/local/bin
+----
+
+. Power off the bare metal node via the baseboard management controller and ensure it is off.
+
+. Retrieve the user name and password of the bare metal node's baseboard management controller. Then, create `base64` strings from the user name and password. In the following example, the user name is `root` and the password is `calvin`.
+
+Here is a sample table:
+
+.Table 1
+[%header,cols="1,1,1"]
+|===
+|header row 1
+|header row 2
+|header row 3
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+
+[id="lists_and_lists"]
+== Lists Upon Lists
+
+Some lists:
+
+.Adjacent lists
+* this list
+* should join
+
+* to have
+* four items
+
+.Numbered lists
+. These items
+. will be auto-numbered
+.. and can be nested
+. A numbered list can nest
+* unordered
+* list
+* items
+
+And a final link: [[google]]When all else fails, head over to <http://google.com>.

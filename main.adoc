@@ -1,0 +1,22 @@
+[id="site"]
+= AsciiDoc static site
+Aidan Reilly <aireilly@redhat.com>
+:url-repo: https://github.com/aireilly/asciidoctor-rh-theme
+:source-highlighter: coderay
+:imagesdir: images
+:doctype: book
+:docinfo: shared-head
+:toc: left
+:toc-title: Contents
+:toclevels: 5
+:product-title: Docs
+:icons: font
+:favicon:
+:quick-uri: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
+
+This is a paragraph of regular text. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+
+include::modules/intro.adoc[leveloffset=+1]
+
+
+
